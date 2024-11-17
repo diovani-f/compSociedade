@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Preços</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Comparador de Preços</h1>
+        <nav>
+            <button class="tab-button" data-tab="products">Todos os Produtos</button>
+            <button class="tab-button" data-tab="markets">Mercados</button>
+            <button class="tab-button" data-tab="cart">Carrinho de Compras</button>
+        </nav>
+    </header>
+    <main>
+        <section id="products" class="tab-content">
+            <h2>Todos os Produtos</h2>
+            <input type="text" id="product-search" placeholder="Pesquisar produtos..." class="search-input">
+            <div id="product-list"></div>
+        </section>
+        <section id="markets" class="tab-content hidden">
+            <h2>Mercados</h2>
+            <ul id="market-list"></ul>
+        </section>
+        <section id="cart" class="tab-content hidden">
+            <h2>Carrinho de Compras</h2>
+            <div id="cart-list"></div>
+            <p>Total: <span id="cart-total">R$ 0,00</span></p>
+            <button class="clear-cart-btn" onclick="clearCart()">Limpar Carrinho</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
